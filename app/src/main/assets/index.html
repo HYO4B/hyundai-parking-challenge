@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>현대파킹 · 공영주차 비교</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand" aria-label="현대파킹, 서울 공영주차"><span class="brand-mark" aria-hidden="true">P<span>.</span></span><span class="brand-word">현대파킹</span><span class="brand-divider"></span><span class="brand-subtitle">서울 공영주차</span></div>
+      <span class="demo-tag">시연 화면</span>
+    </header>
+
+    <main class="page">
+      <div class="destination-row">
+        <div><span class="eyebrow">목적지 주변 주차</span><h1>어디에 주차할까요?</h1></div>
+        <form id="search-form" class="search-form" role="search"><label for="destination" class="sr-only">목적지 검색</label><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="destination" type="search" value="뱅뱅사거리" placeholder="목적지 검색" autocomplete="off"><button type="submit">찾기</button></form>
+      </div>
+      <div id="empty-state" class="empty-state" hidden><div><strong>아직 준비된 장소가 없어요</strong><p>뱅뱅사거리 또는 언주초교를 검색해 주세요.</p></div><button type="button" id="reset-search">시연 장소 보기</button></div>
+      <section id="parking-result" class="parking-result" aria-labelledby="parking-name">
+        <div class="result-title"><div><div class="result-overline"><span class="public-pill">공영</span><span>시연 주차장 1곳</span></div><h2 id="parking-name">언주초교 공영주차장</h2><p>서울 강남구 남부순환로363길 19</p></div><div class="destination-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.4 6-11a6 6 0 1 0-12 0c0 5.6 6 11 6 11Z"/><circle cx="12" cy="10" r="2"/></svg><span>목적지 <b>뱅뱅사거리</b></span></div></div>
+        <div class="decision-grid">
+          <section class="entrance-panel" aria-labelledby="entrance-title"><div class="panel-heading"><div class="panel-label"><span class="icon-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h4l1.5-2h5L16 8h4v11H4z"/><circle cx="12" cy="13.5" r="3"/></svg></span><h3 id="entrance-title">입구 미리보기</h3></div><span class="quiet-chip">사진 확인 중</span></div><div class="entrance-visual"><div class="entrance-message"><strong>입구 사진 준비 중</strong><span>확인된 사진을 보여드릴게요</span></div><div class="outline-art" aria-hidden="true"><div class="outline-building"><div class="outline-door"><span>P</span></div><i></i></div><div class="outline-ground"></div></div><small>안내용 일러스트 · 실제 입구 아님</small></div></section>
+          <div class="facts-panel">
+            <section class="price-box" aria-labelledby="price-title"><div class="panel-label"><span class="icon-tile light"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span><h3 id="price-title">예상 주차요금</h3></div><div class="price-content"><div><span class="value-label" id="duration-label">1시간 기준</span><strong id="fee-calculated" class="price-value" aria-live="polite">2,400<span>원</span></strong><p>5분 200원 · 2026.04.15 기준</p></div><div class="time-options" role="group" aria-label="예상 주차 시간"><button type="button" data-minutes="30">30분</button><button type="button" data-minutes="60" class="active" aria-pressed="true">1시간</button><button type="button" data-minutes="120">2시간</button></div></div></section>
+            <section class="walk-box" aria-labelledby="walk-title"><div class="panel-label"><span class="icon-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4.5" r="1.5"/><path d="m11 21 1-5-2-3 1-4-3 2-1 3m4-5 3 2 3 1m-6 1 4 3 1 5"/></svg></span><div><h3 id="walk-title">목적지까지 도보</h3><p>뱅뱅사거리</p></div></div><div class="walk-status"><strong>확인 불가</strong><span>도보 경로 미연결</span></div></section>
+          </div>
+        </div>
+        <section class="compare-panel" aria-labelledby="compare-title">
+          <div class="compare-copy"><span class="compare-icon" aria-hidden="true">↘</span><div><h3 id="compare-title">인근 주차장과 비교</h3><p>가장 가까운 주차장은 아직 확인 중</p></div></div>
+          <div class="compare-place"><span>민영 · 비교 예시</span><strong>나이스파크 강남 웅진베어스빌</strong><small>모두의주차장 · 2025.08.25 기준</small></div>
+          <div class="compare-amount"><span id="compare-duration">1시간 예상요금</span><strong id="reference-fee">4,000원</strong></div>
+          <div id="compare-result" class="compare-result" aria-live="polite"><strong>1,600원 저렴</strong><span>두 주차장의 과거 요금 비교</span></div>
+        </section>
+        <p class="data-note">시연용 과거 요금 · 현재 요금과 할인은 현장 확인 필요 · 주차 현황 미연결</p>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

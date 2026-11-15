@@ -11,7 +11,7 @@ task_private="$project_root/private/release-signing"
 task_keystore="$task_private/parking-release.p12"
 task_password="$task_private/password.txt"
 task_unsigned="$project_root/app/build/outputs/apk/release/app-release-unsigned.apk"
-task_apk="$project_root/apk/개인_현대파킹_release.apk"
+task_apk="$project_root/apk/김효섭_편한주차_release.apk"
 
 for required in "$task_jdk/bin/java" "$task_jdk/bin/keytool" "$task_build_tools/apksigner"; do
   if [[ ! -x "$required" ]]; then printf 'Missing required tool: %s\n' "$required" >&2; exit 1; fi

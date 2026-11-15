@@ -1,4 +1,4 @@
-# 현대파킹
+# 편한주차
 
 목적지 주변 공영주차장의 예상 요금, 목적지까지의 거리와 빈자리 정보를 함께 비교하는 차량용 주차 탐색 앱을 제안합니다.
 
@@ -12,8 +12,8 @@
 
 ## APK 실행
 
-- 서명된 Android release 시연 APK: [`apk/개인_현대파킹_release.apk`](apk/개인_현대파킹_release.apk)
-- Android Studio Device Manager에서 Pleos Connect 에뮬레이터를 실행한 후 APK를 설치합니다. 예: `adb install -r apk/개인_현대파킹_release.apk`.
+- 서명된 Android release 시연 APK: [`apk/김효섭_편한주차_release.apk`](apk/김효섭_편한주차_release.apk)
+- Android Studio Device Manager에서 Pleos Connect 에뮬레이터를 실행한 후 APK를 설치합니다. 예: `adb install -r apk/김효섭_편한주차_release.apk`.
 - 검증 환경: Pleos Connect Emulator **v2.1.0, Android API 34**, 전체 화면 **2560×1440**. 화면 표시와 시간별 요금 변경을 확인했습니다. 실제 차량은 테스트하지 않았습니다.
 - APK 패키지: `kr.ssadaparking.demo.releasecandidate`. 테스트용 패키지명으로 기존 시연 앱과 공존합니다.
 
